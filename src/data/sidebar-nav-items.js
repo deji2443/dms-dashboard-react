@@ -1,40 +1,50 @@
 export default function() {
   return [
     {
-      title: "Blog Dashboard",
+      title: "Dashboard",
       to: "/blog-overview",
-      htmlBefore: '<i class="material-icons">edit</i>',
+      htmlBefore: '<i class="material-icons">apartment</i>',
       htmlAfter: ""
     },
     {
-      title: "Blog Posts",
+      title: "Companies",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
-      to: "/blog-posts",
+      to: "/blog-posts"
     },
     {
-      title: "Add New Post",
+      title: "Order Pool",
       htmlBefore: '<i class="material-icons">note_add</i>',
-      to: "/add-new-post",
+      to: "/add-new-post"
     },
     {
-      title: "Forms & Components",
+      title: "Order History",
       htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/components-overview",
+      to: "/components-overview"
     },
     {
-      title: "Tables",
+      title: "Subscriptions",
       htmlBefore: '<i class="material-icons">table_chart</i>',
-      to: "/tables",
+      to: "/tables"
     },
     {
-      title: "User Profile",
+      title: "Earnings",
+      htmlBefore: '<i class="material-icons">account_balance</i>',
+      to: "/user-profile-lite"
+    },
+    {
+      title: "Reports",
+      htmlBefore: '<i class="material-icons">poll</i>',
+      to: "/errors"
+    },
+    {
+      title: "Settings",
+      htmlBefore: '<i class="material-icons">settings</i>',
+      to: "/errors"
+    },
+    {
+      title: "Supports",
       htmlBefore: '<i class="material-icons">person</i>',
-      to: "/user-profile-lite",
-    },
-    {
-      title: "Errors",
-      htmlBefore: '<i class="material-icons">error</i>',
-      to: "/errors",
+      to: "/signup"
     }
   ];
 }

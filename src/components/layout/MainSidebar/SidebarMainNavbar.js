@@ -27,22 +27,18 @@ class SidebarMainNavbar extends React.Component {
         >
           <NavbarBrand
             className="w-100 mr-0"
-            href="#"
+            href="/"
             style={{ lineHeight: "25px" }}
           >
             <div className="d-table m-auto">
               <img
                 id="main-logo"
-                className="d-inline-block align-top mr-1"
+                className="d-inline-block align-top mr-10"
                 style={{ maxWidth: "25px" }}
-                src={require("../../../images/shards-dashboards-logo.svg")}
-                alt="Shards Dashboard"
+                src={require("../../../images/Vector-logo.svg")}
+                alt="DMS"
               />
-              {!hideLogoText && (
-                <span className="d-none d-md-inline ml-1">
-                  Shards Dashboard
-                </span>
-              )}
+              {!hideLogoText && <span className="d-none d-md-inline ml-1" />}
             </div>
           </NavbarBrand>
           {/* eslint-disable-next-line */}

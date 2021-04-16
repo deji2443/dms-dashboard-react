@@ -80,7 +80,7 @@ class SmallStats extends React.Component {
   }
 
   render() {
-    const { variation, label, value, percentage, increase } = this.props;
+    const { variation, label, value } = this.props;
 
     const cardClasses = classNames(
       "stats-small",
@@ -103,7 +103,7 @@ class SmallStats extends React.Component {
 
     const labelClasses = classNames(
       "stats-small__label",
-      "text-uppercase",
+      "text-capitalize text-dark",
       variation !== "1" && "mb-1"
     );
 
@@ -113,15 +113,15 @@ class SmallStats extends React.Component {
       variation === "1" ? "my-3" : "m-0"
     );
 
-    const innerDataFieldClasses = classNames(
-      "stats-small__data",
-      variation !== "1" && "text-right align-items-center"
-    );
+    // const innerDataFieldClasses = classNames(
+    //   "stats-small__data",
+    //   variation !== "1" && "text-right align-items-center"
+    // );
 
-    const percentageClasses = classNames(
-      "stats-small__percentage",
-      `stats-small__percentage--${increase ? "increase" : "decrease"}`
-    );
+    // const percentageClasses = classNames(
+    //   "stats-small__percentage",
+    //   `stats-small__percentage--${increase ? "increase" : "decrease"}`
+    // );
 
     const canvasHeight = variation === "1" ? 120 : 60;
 
@@ -131,17 +131,29 @@ class SmallStats extends React.Component {
           <div className={innerWrapperClasses}>
             <div className={dataFieldClasses}>
               <span className={labelClasses}>{label}</span>
-              <h6 className={valueClasses}>{value}</h6>
+              <div className="row">
+                <div className="col">
+                  <h6 className={valueClasses}>{value}</h6>
+                </div>
+                <div className="col">
+                  <canvas
+                    height={canvasHeight}
+                    ref={this.canvasRef}
+                    style={{ color: "red" }}
+                    className={`stats-small-${shortid()}`}
+                  />
+                </div>
+              </div>
             </div>
-            <div className={innerDataFieldClasses}>
+            {/* <div className={innerDataFieldClasses}>
               <span className={percentageClasses}>{percentage}</span>
-            </div>
+            </div> */}
           </div>
-          <canvas
+          {/* <canvas
             height={canvasHeight}
             ref={this.canvasRef}
             className={`stats-small-${shortid()}`}
-          />
+          /> */}
         </CardBody>
       </Card>
     );

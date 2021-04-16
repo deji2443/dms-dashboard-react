@@ -1,14 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Collapse,
-  NavItem,
-  NavLink
-} from "shards-react";
+// import { Link } from "react-router-dom";
+import { Dropdown, NavItem } from "shards-react";
 
 export default class UserActions extends React.Component {
   constructor(props) {
@@ -30,13 +22,23 @@ export default class UserActions extends React.Component {
   render() {
     return (
       <NavItem tag={Dropdown} caret toggle={this.toggleUserActions}>
-        <DropdownToggle caret tag={NavLink} className="text-nowrap px-3">
+        <div className="text-nowrap px-3">
+          <img
+            className="user-avatar rounded-circle mr-2 mt-2 "
+            src={require("./../../../../images/avatars/Photo.jpg")}
+            alt="User"
+          />
+          <span className="d-none d-md-inline-block mt-2 text-black">
+            John Adams
+          </span>
+        </div>
+        {/* <DropdownToggle caret tag={NavLink} className="text-nowrap px-3">
           <img
             className="user-avatar rounded-circle mr-2"
-            src={require("./../../../../images/avatars/0.jpg")}
+            src={require("./../../../../images/avatars/Photo.jpg")}
             alt="User Avatar"
           />{" "}
-          <span className="d-none d-md-inline-block">Sierra Brooks</span>
+          <span className="d-none d-md-inline-block">John Adams</span>
         </DropdownToggle>
         <Collapse tag={DropdownMenu} right small open={this.state.visible}>
           <DropdownItem tag={Link} to="user-profile">
@@ -55,7 +57,7 @@ export default class UserActions extends React.Component {
           <DropdownItem tag={Link} to="/" className="text-danger">
             <i className="material-icons text-danger">&#xE879;</i> Logout
           </DropdownItem>
-        </Collapse>
+        </Collapse> */}
       </NavItem>
     );
   }

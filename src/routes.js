@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 
 // Layout Types
-import { DefaultLayout } from "./layouts";
+import { DefaultLayout, SignIn, SignUp } from "./layouts";
 
 // Route Views
 import BlogOverview from "./views/BlogOverview";
@@ -12,14 +12,36 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
+import signUp from "./views/signUp";
+import signIn from "./views/signIn";
 
 export default [
   {
     path: "/",
     exact: true,
-    layout: DefaultLayout,
-    component: () => <Redirect to="/blog-overview" />
+    layout: SignUp,
+    // component: () => <Redirect to="/signup" />
+    component: signUp
   },
+  {
+    path: "/signin",
+    exact: true,
+    layout: SignIn,
+    component: SignIn
+  },
+
+  {
+    path: "/signin",
+    exact: true,
+    layout: signIn,
+    component: () => <Redirect to="/signin" />
+  },
+  // {
+  //   path: "/blog-overview",
+  //   exact: true,
+  //   layout: DefaultLayout,
+  //   component: () => <Redirect to="/blog-overview" />
+  // },
   {
     path: "/blog-overview",
     layout: DefaultLayout,

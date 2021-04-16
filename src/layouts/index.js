@@ -1,3 +1,6 @@
 import DefaultLayout from "./Default";
 
-export { DefaultLayout };
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
+
+export { DefaultLayout, SignUp, SignIn };

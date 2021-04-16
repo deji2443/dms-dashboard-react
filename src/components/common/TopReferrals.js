@@ -38,22 +38,22 @@ const TopReferrals = ({ title, referralData }) => (
         <Col>
           <FormSelect
             size="sm"
-            value="last-week"
+            value="today"
             style={{ maxWidth: "130px" }}
             onChange={() => {}}
           >
-            <option value="last-week">Last Week</option>
             <option value="today">Today</option>
+            <option value="last-week">Last Week</option>
             <option value="last-month">Last Month</option>
             <option value="last-year">Last Year</option>
           </FormSelect>
         </Col>
 
         {/* View Full Report */}
-        <Col className="text-right view-report">
-          {/* eslint-disable-next-line */}
-          <a href="#">Full report &rarr;</a>
-        </Col>
+        {/* <Col className="text-right view-report"> */}
+        {/* eslint-disable-next-line */}
+        {/* <a href="#">Full report &rarr;</a>
+        </Col> */}
       </Row>
     </CardFooter>
   </Card>
@@ -80,31 +80,31 @@ TopReferrals.defaultProps = {
     {
       title: "Stack Overflow",
       value: "11,201"
-    },
-    {
-      title: "Hacker News",
-      value: "9,291"
-    },
-    {
-      title: "Reddit",
-      value: "8,281"
-    },
-    {
-      title: "The Next Web",
-      value: "7,128"
-    },
-    {
-      title: "Tech Crunch",
-      value: "6,218"
-    },
-    {
-      title: "YouTube",
-      value: "1,218"
-    },
-    {
-      title: "Adobe",
-      value: "1,171"
     }
+    // {
+    //   title: "Hacker News",
+    //   value: "9,291"
+    // },
+    // {
+    //   title: "Reddit",
+    //   value: "8,281"
+    // },
+    // {
+    //   title: "The Next Web",
+    //   value: "7,128"
+    // },
+    // {
+    //   title: "Tech Crunch",
+    //   value: "6,218"
+    // },
+    // {
+    //   title: "YouTube",
+    //   value: "1,218"
+    // },
+    // {
+    //   title: "Adobe",
+    //   value: "1,171"
+    // }
   ]
 };
 
