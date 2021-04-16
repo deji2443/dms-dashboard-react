@@ -1,10 +1,10 @@
 <h1 align="center" style="border-bottom: none !important; margin-bottom: 5px !important;"><a href="">DMS Dashboard React</a></h1>
-
+<!-- 
 <p align="center">
 <a href="">
 <img src="assets/demo-preview.gif" width="650" />
 </a>
-</p>
+</p> -->
  
 <br />
 
