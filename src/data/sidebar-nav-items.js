@@ -44,7 +44,7 @@ export default function() {
     {
       title: "Supports",
       htmlBefore: '<i class="material-icons">person</i>',
-      to: "/signup"
+      to: "/errors"
     }
   ];
 }

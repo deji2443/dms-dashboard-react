@@ -8,7 +8,7 @@ import {
   ListGroupItem
 } from "shards-react";
 
-const TopReferrals = ({ title, referralData, imageSrc }) => (
+const ExchangePool = ({ title, referralData, imageSrc }) => (
   <Card small>
     <CardHeader className="text-left m-2">
       <h6 className="m-0 h4">{title}</h6>
@@ -35,7 +35,7 @@ const TopReferrals = ({ title, referralData, imageSrc }) => (
   </Card>
 );
 
-TopReferrals.propTypes = {
+ExchangePool.propTypes = {
   /**
    * The component's title.
    */
@@ -48,9 +48,9 @@ TopReferrals.propTypes = {
   referralData: PropTypes.array
 };
 
-TopReferrals.defaultProps = {
+ExchangePool.defaultProps = {
   title: "120",
-  imageSrc: require("../../images/avatars/Photo.png"),
+  imageSrc: require("../../images/avatars/car.png"),
   referralData: [
     {
       title: "Companies sent order to delivery pool today."
@@ -83,4 +83,4 @@ TopReferrals.defaultProps = {
   ]
 };
 
-export default TopReferrals;
+export default ExchangePool;

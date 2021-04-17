@@ -59,7 +59,7 @@ const SignIn = () => (
           </div>
           <div className="col-sm-5">
             <div className="dms-ride">
-              <div className="form welcome">
+              <div className="form welcome log">
                 <h2 className="dms-info">You’re Welcome Back!</h2>
 
                 <p className="dms-subText">
@@ -97,13 +97,13 @@ const SignIn = () => (
                     </div>
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-md-8">
                     <p className="dms-login">
                       Just joining us here? <a href={url}> Register Now</a>
                     </p>
                   </div>
-                  <div className="col-md-6">
-                    <Link to="/blog-overview">
+                  <div className="col-md-4">
+                    <Link to="/blog-overview" className="register-btn">
                       <button
                         type="submit"
                         className="btn btn-primary btn-start btn-right"

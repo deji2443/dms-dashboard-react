@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import shortid from "shortid";
-import { Card, CardBody } from "shards-react";
+import { Card, CardBody, Col, FormSelect, Row } from "shards-react";
 
 import Chart from "../../utils/chart";
 
@@ -80,7 +80,7 @@ class SmallStats extends React.Component {
   }
 
   render() {
-    const { variation, label, value } = this.props;
+    const { variation, label, value, imgValue } = this.props;
 
     const cardClasses = classNames(
       "stats-small",
@@ -113,6 +113,12 @@ class SmallStats extends React.Component {
       variation === "1" ? "my-3" : "m-0"
     );
 
+    const imageClasses = classNames(
+      "stats-small__value",
+      "count",
+      variation === "1" ? "my-3" : "m-0"
+    );
+
     // const innerDataFieldClasses = classNames(
     //   "stats-small__data",
     //   variation !== "1" && "text-right align-items-center"
@@ -132,16 +138,45 @@ class SmallStats extends React.Component {
             <div className={dataFieldClasses}>
               <span className={labelClasses}>{label}</span>
               <div className="row">
-                <div className="col">
-                  <h6 className={valueClasses}>{value}</h6>
+                <div className="col-sm-7">
+                  <div className="row">
+                    <div className="col">
+                      <h6 className={valueClasses}>{value}</h6>
+                    </div>
+                    <div className="col">
+                      <canvas
+                        height={canvasHeight}
+                        ref={this.canvasRef}
+                        style={{ color: "red" }}
+                        className={`stats-small-${shortid()}`}
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div className="col">
-                  <canvas
-                    height={canvasHeight}
-                    ref={this.canvasRef}
-                    style={{ color: "red" }}
-                    className={`stats-small-${shortid()}`}
-                  />
+
+                <div className="col-sm-5">
+                  <div className="d-block">
+                    <div className="col">
+                      <img className={imageClasses} src={imgValue} alt="" />
+                    </div>
+                    <div className="col">
+                      <Row>
+                        <Col>
+                          <FormSelect
+                            size="sm"
+                            value="today"
+                            style={{ maxWidth: "130px" }}
+                            onChange={() => {}}
+                          >
+                            <option value="today">Today</option>
+                            <option value="last-week">Last Week</option>
+                            <option value="last-month">Last Month</option>
+                            <option value="last-year">Last Year</option>
+                          </FormSelect>
+                        </Col>
+                      </Row>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -196,7 +231,9 @@ SmallStats.propTypes = {
   /**
    * The chart labels.
    */
-  chartLabels: PropTypes.array
+  chartLabels: PropTypes.array,
+  // Image
+  imgValue: PropTypes.object
 };
 
 SmallStats.defaultProps = {
@@ -207,7 +244,8 @@ SmallStats.defaultProps = {
   chartOptions: Object.create(null),
   chartConfig: Object.create(null),
   chartData: [],
-  chartLabels: []
+  chartLabels: [],
+  imgValue: []
 };
 
 export default SmallStats;

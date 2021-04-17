@@ -5,7 +5,7 @@ import { Row, Card, CardHeader, CardBody } from "shards-react";
 // import RangeDatePicker from "../common/RangeDatePicker";
 import Chart from "../../utils/chart";
 
-class UsersOverview extends React.Component {
+class Delivery extends React.Component {
   constructor(props) {
     super(props);
 
@@ -69,7 +69,7 @@ class UsersOverview extends React.Component {
     };
 
     const BlogUsersOverview = new Chart(this.canvasRef.current, {
-      type: "LineWithLine",
+      type: "bar",
       data: this.props.chartData,
       options: chartOptions
     });
@@ -90,14 +90,14 @@ class UsersOverview extends React.Component {
     return (
       <Card small className="h-100">
         <CardHeader className="border-bottom">
-          <h6 className="m-0 h4">{title}</h6>
+          <h6 className="m-0  h4">{title}</h6>
         </CardHeader>
         <CardBody className="pt-0">
           <Row className="border-bottom py-2 bg-light">
             {/* <Col sm="6" className="d-flex mb-2 mb-sm-0">
               <RangeDatePicker />
-            </Col> */}
-            {/* <Col>
+            </Col>
+            <Col>
               <Button
                 size="sm"
                 className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
@@ -117,7 +117,7 @@ class UsersOverview extends React.Component {
   }
 }
 
-UsersOverview.propTypes = {
+Delivery.propTypes = {
   /**
    * The component's title.
    */
@@ -132,13 +132,13 @@ UsersOverview.propTypes = {
   chartOptions: PropTypes.object
 };
 
-UsersOverview.defaultProps = {
-  title: "Orders Today",
+Delivery.defaultProps = {
+  title: "Delivered Orders",
   chartData: {
     labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
     datasets: [
       {
-        label: "Delivered",
+        label: "Current Month",
         fill: "start",
         data: [
           500,
@@ -172,7 +172,7 @@ UsersOverview.defaultProps = {
           3100,
           4250
         ],
-        backgroundColor: "#4339F2",
+        backgroundColor: "rgba(0,123,255,0.1)",
         borderColor: "rgba(0,123,255,1)",
         pointBackgroundColor: "#ffffff",
         pointHoverBackgroundColor: "rgb(0,123,255)",
@@ -181,50 +181,7 @@ UsersOverview.defaultProps = {
         pointHoverRadius: 3
       },
       {
-        label: "Reviews",
-        fill: "start",
-        data: [
-          500,
-          800,
-          30,
-          180,
-          20,
-          320,
-          20,
-          650,
-          90,
-          1200,
-          70,
-          940,
-          1420,
-          100,
-          960,
-          1450,
-          1820,
-          800,
-          2102,
-          120,
-          3920,
-          3202,
-          3140,
-          200,
-          3200,
-          3200,
-          300,
-          2910,
-          3100,
-          4250
-        ],
-        backgroundColor: "#FF3A29",
-        borderColor: "rgba(0,123,255,1)",
-        pointBackgroundColor: "#ffffff",
-        pointHoverBackgroundColor: "rgb(0,123,255)",
-        borderWidth: 1.5,
-        pointRadius: 0,
-        pointHoverRadius: 3
-      },
-      {
-        label: "Cancel",
+        label: "Past Month",
         fill: "start",
         data: [
           380,
@@ -258,18 +215,18 @@ UsersOverview.defaultProps = {
           780,
           1200
         ],
-        backgroundColor: "#34B53A",
-        borderColor: "#34B53A",
+        backgroundColor: "rgba(255,65,105,0.1)",
+        borderColor: "rgba(255,65,105,1)",
         pointBackgroundColor: "#ffffff",
         pointHoverBackgroundColor: "rgba(255,65,105,1)",
         borderDash: [3, 3],
         borderWidth: 1,
         pointRadius: 0,
         pointHoverRadius: 2,
-        pointBorderColor: "#34B53A"
+        pointBorderColor: "rgba(255,65,105,1)"
       }
     ]
   }
 };
 
-export default UsersOverview;
+export default Delivery;

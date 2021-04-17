@@ -5,12 +5,15 @@ import { Container, Row, Col } from "shards-react";
 import PageTitle from "./../components/common/PageTitle";
 import SmallStats from "./../components/common/SmallStats";
 import UsersOverview from "./../components/blog/UsersOverview";
+import Delivery from "./../components/blog/Delivery";
+
 // import UsersByDevice from "./../components/blog/UsersByDevice";
 // import NewDraft from "./../components/blog/NewDraft";
 // import Discussions from "./../components/blog/Discussions";
 import TopReferrals from "./../components/common/TopReferrals";
+import ExchangePool from "./../components/common/ExchangePool";
 
-const BlogOverview = ({ smallStats }) => (
+const BlogOverview = ({ smallStats, smallStatsTwo }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
@@ -59,14 +62,14 @@ const BlogOverview = ({ smallStats }) => (
     </Row> */}
 
     <Row>
-      <Col lg="3" md="12" sm="12" className="mb-4">
-        <div className="d-block">
+      <Col lg="3" md="12" sm="12" className="mb-4 col-sm">
+        <div className="d-block mx-auto">
           {smallStats.map((stats, idx) => (
             <Col
-              // lg="2"
-              // md="12"
-              // sm="12"
-              className="mb-4"
+              lg="12"
+              md="12"
+              sm="12"
+              className="mb-4 d-block"
               key={idx}
               {...stats.attrs}
             >
@@ -80,15 +83,16 @@ const BlogOverview = ({ smallStats }) => (
                 percentage={stats.percentage}
                 increase={stats.increase}
                 decrease={stats.decrease}
+                imgValue={stats.imgValue}
               />
             </Col>
           ))}
 
-          {smallStats.map((stats, idx) => (
+          {/* {smallStats.map((stats, idx) => (
             <Col
-              // lg="2"
-              // md="12"
-              // sm="12"
+              lg="12"
+              md="12"
+              sm="12"
               className="mb-4"
               key={idx}
               {...stats.attrs}
@@ -105,7 +109,7 @@ const BlogOverview = ({ smallStats }) => (
                 decrease={stats.decrease}
               />
             </Col>
-          ))}
+          ))} */}
         </div>
       </Col>
       <Col lg="3" md="12" sm="12" className="mb-4">
@@ -118,28 +122,62 @@ const BlogOverview = ({ smallStats }) => (
     </Row>
 
     <Row>
-      {smallStats.map((stats, idx) => (
-        <Col lg="3" md="12" sm="12" className="mb-4" key={idx} {...stats.attrs}>
-          <SmallStats
-            id={`small-stats-${idx}`}
-            variation="1"
-            chartData={stats.datasets}
-            chartLabels={stats.chartLabels}
-            label={stats.label}
-            value={stats.value}
-            percentage={stats.percentage}
-            increase={stats.increase}
-            decrease={stats.decrease}
-          />
-        </Col>
-      ))}
+      <Col lg="3" md="12" sm="12" className="mb-4 col-sm">
+        <div className="d-block mx-auto">
+          {smallStatsTwo.map((stats, idx) => (
+            <Col
+              lg="12"
+              md="12"
+              sm="12"
+              className="mb-4 d-block"
+              key={idx}
+              {...stats.attrs}
+            >
+              <SmallStats
+                id={`small-stats-${idx}`}
+                variation="1"
+                chartData={stats.datasets}
+                chartLabels={stats.chartLabels}
+                label={stats.label}
+                value={stats.value}
+                percentage={stats.percentage}
+                increase={stats.increase}
+                decrease={stats.decrease}
+                imgValue={stats.imgValue}
+              />
+            </Col>
+          ))}
 
-      <Col lg="3" className="mb-4">
-        <TopReferrals />
+          {/* {smallStats.map((stats, idx) => (
+            <Col
+              lg="12"
+              md="12"
+              sm="12"
+              className="mb-4"
+              key={idx}
+              {...stats.attrs}
+            >
+              <SmallStats
+                id={`small-stats-${idx}`}
+                variation="1"
+                chartData={stats.datasets}
+                chartLabels={stats.chartLabels}
+                label={stats.label}
+                value={stats.value}
+                percentage={stats.percentage}
+                increase={stats.increase}
+                decrease={stats.decrease}
+              />
+            </Col>
+          ))} */}
+        </div>
+      </Col>
+      <Col lg="3" md="12" sm="12" className="mb-4">
+        <ExchangePool />
       </Col>
 
       <Col lg="6" md="12" sm="12" className="mb-4">
-        <UsersOverview />
+        <Delivery />
       </Col>
     </Row>
   </Container>
@@ -149,7 +187,8 @@ BlogOverview.propTypes = {
   /**
    * The small stats dataset.
    */
-  smallStats: PropTypes.array
+  smallStats: PropTypes.array,
+  smallStatsTwo: PropTypes.array
 };
 
 BlogOverview.defaultProps = {
@@ -159,6 +198,7 @@ BlogOverview.defaultProps = {
       value: "504",
       percentage: "4.7%",
       increase: true,
+      imgValue: require("../images/avatars/Vector.png"),
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
       datasets: [
@@ -166,30 +206,128 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(0, 184, 216, 0.1)",
-          borderColor: "rgb(0, 184, 216)",
+          backgroundColor: "rgba(255, 0, 0, 0)",
+          borderColor: "rgb(255, 178, 0)",
+          data: [1, 2, 1, 3, 5, 4, 7]
+        }
+      ]
+    },
+    {
+      label: "Total Companies",
+      value: "504",
+      percentage: "4.7%",
+      increase: true,
+      imgValue: require("../images/avatars/Vector..png"),
+      chartLabels: [null, null, null, null, null, null, null],
+      attrs: { md: "6", sm: "6" },
+      datasets: [
+        {
+          label: "Today",
+          fill: "start",
+          borderWidth: 1.5,
+          backgroundColor: "rgba(255,0,0,0)",
+          borderColor: "rgb(255,178,0)",
           data: [1, 2, 1, 3, 5, 4, 7]
         }
       ]
     }
     // {
-    //   label: "Pages",
-    //   value: "182",
-    //   percentage: "12.4",
-    //   increase: true,
+    //   label: "Comments",
+    //   value: "8,147",
+    //   percentage: "3.8%",
+    //   increase: false,
+    //   decrease: true,
     //   chartLabels: [null, null, null, null, null, null, null],
-    //   attrs: { md: "6", sm: "6" },
+    //   attrs: { md: "4", sm: "6" },
     //   datasets: [
     //     {
     //       label: "Today",
     //       fill: "start",
     //       borderWidth: 1.5,
-    //       backgroundColor: "rgba(23,198,113,0.1)",
-    //       borderColor: "rgb(23,198,113)",
-    //       data: [1, 2, 3, 3, 3, 4, 4]
+    //       backgroundColor: "rgba(255,180,0,0.1)",
+    //       borderColor: "rgb(255,180,0)",
+    //       data: [2, 3, 3, 3, 4, 3, 3]
     //     }
     //   ]
     // },
+    // {
+    //   label: "New Customers",
+    //   value: "29",
+    //   percentage: "2.71%",
+    //   increase: false,
+    //   decrease: true,
+    //   chartLabels: [null, null, null, null, null, null, null],
+    //   attrs: { md: "4", sm: "6" },
+    //   datasets: [
+    //     {
+    //       label: "Today",
+    //       fill: "start",
+    //       borderWidth: 1.5,
+    //       backgroundColor: "rgba(255,65,105,0.1)",
+    //       borderColor: "rgb(255,65,105)",
+    //       data: [1, 7, 1, 3, 1, 4, 8]
+    //     }
+    //   ]
+    // },
+    // {
+    //   label: "Subscribers",
+    //   value: "17,281",
+    //   percentage: "2.4%",
+    //   increase: false,
+    //   decrease: true,
+    //   chartLabels: [null, null, null, null, null, null, null],
+    //   attrs: { md: "4", sm: "6" },
+    //   datasets: [
+    //     {
+    //       label: "Today",
+    //       fill: "start",
+    //       borderWidth: 1.5,
+    //       backgroundColor: "rgb(0,123,255,0.1)",
+    //       borderColor: "rgb(0,123,255)",
+    //       data: [3, 2, 3, 2, 4, 5, 4]
+    //     }
+    //   ]
+    // }
+  ],
+  smallStatsTwo: [
+    {
+      label: "Total Cancel Orders",
+      value: "504",
+      percentage: "4.7%",
+      increase: true,
+      imgValue: require("../images/avatars/ok.png"),
+      chartLabels: [null, null, null, null, null, null, null],
+      attrs: { md: "6", sm: "6" },
+      datasets: [
+        {
+          label: "Today",
+          fill: "start",
+          borderWidth: 1.5,
+          backgroundColor: "rgba(255, 0, 0, 0)",
+          borderColor: "rgb(255, 178, 0)",
+          data: [1, 2, 1, 3, 5, 4, 7]
+        }
+      ]
+    },
+    {
+      label: "Total Created Orders",
+      value: "504",
+      percentage: "4.7%",
+      increase: true,
+      imgValue: require("../images/avatars/Vec.png"),
+      chartLabels: [null, null, null, null, null, null, null],
+      attrs: { md: "6", sm: "6" },
+      datasets: [
+        {
+          label: "Today",
+          fill: "start",
+          borderWidth: 1.5,
+          backgroundColor: "rgba(255,0,0,0)",
+          borderColor: "rgb(255,178,0)",
+          data: [1, 2, 1, 3, 5, 4, 7]
+        }
+      ]
+    }
     // {
     //   label: "Comments",
     //   value: "8,147",
