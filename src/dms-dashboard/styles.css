@@ -28,14 +28,14 @@ a.navbar-brand.dms-text {
   /* left: 9.03%;
   right: 49.17%; */
   margin: auto;
-  max-width: 600px;
+  max-width: 350px;
   top: calc(50% - 104px / 2 - 114.5px);
   /* font-family: DM Sans; */
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 50px;
-  line-height: 52px;
+  font-size: 25px;
+  line-height: 30px;
   text-align: center;
   color: #000000;
 }
@@ -53,7 +53,7 @@ a.navbar-brand.dms-text {
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
+  font-size: 15px;
   /* line-height: 20px; */
   text-align: center;
   color: #000000;
@@ -72,8 +72,8 @@ button.btn.btn-primary.btn-start {
   /* left: 368px; */
   font-style: normal;
   font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 8px;
   position: relative;
   width: auto;
   height: auto;
@@ -106,7 +106,7 @@ button.btn.btn-primary.btn-start {
   padding: 48px;
 
   position: absolute;
-  width: 650px;
+  width: 520px;
   height: auto;
   left: auto;
   top: 80px;
@@ -143,8 +143,8 @@ button.btn.btn-primary.btn-start {
 
 .form-control {
   height: auto;
-  padding: 1rem 0.75rem !important;
-  font-size: 1.3rem !important;
+  padding: 0.6rem 0.75rem !important;
+  font-size: 0.9rem !important;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
@@ -166,7 +166,7 @@ button.btn.btn-primary.btn-start {
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 25px;
   /* line-height: 36px; */
   color: #393939;
   flex: none;
@@ -186,7 +186,7 @@ button.btn.btn-primary.btn-start {
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 16px;
   /* line-height: 16px; */
   color: #404040;
 }
@@ -200,7 +200,7 @@ button.btn.btn-primary.btn-start {
   font-family: "DM Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 20px;
+  font-size: 15px;
   /* line-height: 18px; */
 }
 
@@ -217,8 +217,8 @@ a {
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 15px;
   text-align: left;
   letter-spacing: 0.003em;
   color: #696974;
@@ -230,9 +230,9 @@ a {
 }
 
 .dms-login {
-  font-size: 21px;
+  font-size: 15px;
   position: static;
-  height: 18px;
+  height: 15px;
   left: 0%;
   right: 45.21%;
   top: calc(50% -18px / 2);
@@ -358,7 +358,7 @@ label.company {
 }
 
 .form.welcome {
-  height: 560px;
+  height: auto;
 }
 
 .main-navbar .navbar {
