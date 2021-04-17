@@ -393,20 +393,19 @@ label.company {
   max-width: 93%;
 }
 
-.main-navbar .navbar {
+/* .main-navbar .navbar {
   height: 5.75rem !important;
-}
+} */
 
 .input-group.input-group-seamless > .custom-select:not(:first-child),
 .input-group.input-group-seamless > .form-control:not(:first-child) {
   padding-left: 2.875rem !important;
-  padding-top: 1rem !important;
 }
 
-.main-sidebar .nav .nav-link {
+/* .main-sidebar .nav .nav-link {
   font-size: 1.5rem !important;
   margin-top: 0.5rem;
-}
+} */
 
 .page-header .page-title {
   font-size: 2rem;
@@ -417,11 +416,16 @@ label.company {
 }
 
 .stats-small--1 .stats-small__label {
-  font-size: 23px !important;
+  font-size: 15px !important;
   margin: 1rem;
   font-weight: bold;
 }
 
 .no-border {
   border: 0 !important;
+}
+
+.select.form-control:not([size]):not([multiple]),
+.custom-select-sm {
+  height: calc(3.09375rem + 1px) !important;
 }

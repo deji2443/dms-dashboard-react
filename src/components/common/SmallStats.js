@@ -138,7 +138,7 @@ class SmallStats extends React.Component {
             <div className={dataFieldClasses}>
               <span className={labelClasses}>{label}</span>
               <div className="row">
-                <div className="col-sm-7">
+                <div className="col-sm-6">
                   <div className="row">
                     <div className="col">
                       <h6 className={valueClasses}>{value}</h6>
@@ -154,7 +154,7 @@ class SmallStats extends React.Component {
                   </div>
                 </div>
 
-                <div className="col-sm-5">
+                <div className="col-sm-6">
                   <div className="d-block">
                     <div className="col">
                       <img className={imageClasses} src={imgValue} alt="" />
