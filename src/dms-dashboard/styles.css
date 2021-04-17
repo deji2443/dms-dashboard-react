@@ -117,7 +117,7 @@ button.btn.btn-primary.btn-start {
 }
 
 .form.log {
-  margin-top: calc(15% - 10px / 2 - 10.5px);
+  margin-top: calc(0% - 0.5px);
 }
 
 .signIn-form {
@@ -278,6 +278,9 @@ a {
   .dms-sign {
     font-size: 12px;
   }
+  .fa-eye:before {
+    top: 1.5rem !important;
+  }
 
   .form-control {
     height: auto;
@@ -289,10 +292,10 @@ a {
   }
   label.company {
     position: absolute;
-    top: 8px;
-    left: 40px;
+    top: 8px !important;
+    left: 40px !important;
     color: #92929d;
-    font-size: 0.7rem;
+    font-size: 0.7rem !important;
   }
   .dms-login,
   .dms-subText {
