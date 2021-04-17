@@ -1,5 +1,5 @@
 import React from "react";
-import "../../src/shards-dashboard/styles.css";
+import "../../src/dms-dashboard/styles.css";
 import { Link } from "react-router-dom";
 
 let url = "/";
