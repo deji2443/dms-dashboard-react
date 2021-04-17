@@ -2,7 +2,7 @@ import React from "react";
 import "../../src/dms-dashboard/styles.css";
 import { Link } from "react-router-dom";
 
-let url = "";
+let url = "/";
 let home = "/";
 const SignUp = () => (
   <section>
