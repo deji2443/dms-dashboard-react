@@ -2,7 +2,7 @@ import React from "react";
 import "../../src/dms-dashboard/styles.css";
 import { Link } from "react-router-dom";
 
-let url = "#";
+let url = "";
 let home = "/";
 const SignUp = () => (
   <section>
@@ -58,7 +58,7 @@ const SignUp = () => (
           </div>
           <div className="col-sm-5">
             <div className="dms-ride">
-              <div className="form">
+              <div className="form signupForm">
                 {/* <ProgressBar now={60} /> */}
 
                 {/* <div className="progress">

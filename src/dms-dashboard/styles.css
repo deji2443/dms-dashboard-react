@@ -269,17 +269,33 @@ a {
 
 @media screen and (max-width: 992px) {
   .dms-sign {
-    font-size: 15px;
+    font-size: 12px;
+  }
+
+  .form-control {
+    height: auto;
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.7rem !important;
+  }
+  .signupForm {
+    max-width: 93%;
+  }
+  label.company {
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    color: #92929d;
+    font-size: 0.7rem;
   }
   .dms-login,
   .dms-subText {
-    font-size: 15px;
+    font-size: 12px;
   }
   button.btn.btn-primary.btn-start {
     width: auto;
-    font-size: 15px;
+    font-size: 12px;
     line-height: normal;
-    padding: 0.8rem;
+    padding: 0.5rem;
   }
 
   a.register-btn {
@@ -287,6 +303,11 @@ a {
     float: left;
     padding-bottom: 2rem;
     margin-bottom: 1rem;
+  }
+
+  a.navbar-brand.dms-text {
+    margin: auto;
+    left: auto;
   }
   .hero-text {
     position: relative;
@@ -317,8 +338,8 @@ a {
     font-family: "DM Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 15px;
     text-align: center;
     color: #000000;
     mix-blend-mode: normal;
@@ -331,10 +352,10 @@ a {
   }
   .privacy-text {
     width: 100%;
-    font-size: 15px;
+    font-size: 12px;
   }
   .dms-info {
-    font-size: 23px;
+    font-size: 15px;
   }
   .dms-login {
     text-align: left;
@@ -359,6 +380,7 @@ label.company {
 
 .form.welcome {
   height: auto;
+  max-width: 93%;
 }
 
 .main-navbar .navbar {
