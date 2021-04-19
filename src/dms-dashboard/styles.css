@@ -433,3 +433,8 @@ label.company {
 .custom-select-sm {
   height: calc(3.09375rem + 1px) !important;
 } */
+@media (max-width: 767.98px) {
+  .page-header .page-title {
+    font-size: 1.2rem !important;
+  }
+}
