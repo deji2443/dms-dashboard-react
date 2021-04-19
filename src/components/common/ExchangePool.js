@@ -11,7 +11,7 @@ import {
 const ExchangePool = ({ title, referralData, imageSrc }) => (
   <Card small>
     <CardHeader className="text-left m-2">
-      <h6 className="m-0 h4">{title}</h6>
+      <h6 className="m-0 h6">{title}</h6>
       <div className="block-handle" />
     </CardHeader>
 
@@ -19,7 +19,7 @@ const ExchangePool = ({ title, referralData, imageSrc }) => (
       <ListGroup small flush className="list-group-small">
         {referralData.map((item, idx) => (
           <ListGroupItem key={idx} className="d-flex px-3 no-border">
-            <span className="text-semibold text-fiord-blue h5">
+            <span className="text-semibold text-fiord-blue h6">
               {item.title}
             </span>
             {/* <span className="ml-auto text-right text-semibold text-reagent-gray">

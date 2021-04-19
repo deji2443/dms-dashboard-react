@@ -80,7 +80,7 @@ class SmallStats extends React.Component {
   }
 
   render() {
-    const { variation, label, value, imgValue } = this.props;
+    const { variation, label, value /*imgValue*/ } = this.props;
 
     const cardClasses = classNames(
       "stats-small",
@@ -113,11 +113,11 @@ class SmallStats extends React.Component {
       variation === "1" ? "my-3" : "m-0"
     );
 
-    const imageClasses = classNames(
-      "stats-small__value",
-      "count",
-      variation === "1" ? "my-3" : "m-0"
-    );
+    // const imageClasses = classNames(
+    //   "stats-small__value",
+    //   "count",
+    //   variation === "1" ? "my-3" : "m-0"
+    // );
 
     // const innerDataFieldClasses = classNames(
     //   "stats-small__data",
@@ -156,12 +156,12 @@ class SmallStats extends React.Component {
 
                 <div className="col-sm-5">
                   <div className="d-block">
-                    <div className="col">
+                    {/* <div className="col">
                       <img className={imageClasses} src={imgValue} alt="" />
-                    </div>
+                    </div> */}
                     <div className="col">
                       <Row>
-                        <Col>
+                        <Col className="mb-1">
                           <FormSelect
                             size="sm"
                             value="today"

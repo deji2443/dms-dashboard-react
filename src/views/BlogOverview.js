@@ -62,7 +62,7 @@ const BlogOverview = ({ smallStats, smallStatsTwo }) => (
     </Row> */}
 
     <Row>
-      <Col lg="3" md="12" sm="12" className="mb-4 col-sm">
+      <Col lg="3" md="12" sm="12" className="mb-4">
         <div className="d-block mx-auto">
           {smallStats.map((stats, idx) => (
             <Col
@@ -83,7 +83,7 @@ const BlogOverview = ({ smallStats, smallStatsTwo }) => (
                 percentage={stats.percentage}
                 increase={stats.increase}
                 decrease={stats.decrease}
-                imgValue={stats.imgValue}
+                // imgValue={stats.imgValue}
               />
             </Col>
           ))}
@@ -143,7 +143,7 @@ const BlogOverview = ({ smallStats, smallStatsTwo }) => (
                 percentage={stats.percentage}
                 increase={stats.increase}
                 decrease={stats.decrease}
-                imgValue={stats.imgValue}
+                // imgValue={stats.imgValue}
               />
             </Col>
           ))}
@@ -196,11 +196,11 @@ BlogOverview.defaultProps = {
     {
       label: "Total Exchange Pool Orders",
       value: "504",
-      percentage: "4.7%",
-      increase: true,
-      imgValue: require("../images/avatars/Vector.png"),
+      // percentage: "4.7%",
+      // increase: true,
+      // imgValue: require("../images/avatars/Vector.png"),
       chartLabels: [null, null, null, null, null, null, null],
-      attrs: { md: "6", sm: "6" },
+      // attrs: { md: "6", sm: "6" },
       datasets: [
         {
           label: "Today",
@@ -217,7 +217,7 @@ BlogOverview.defaultProps = {
       value: "504",
       percentage: "4.7%",
       increase: true,
-      imgValue: require("../images/avatars/Vector..png"),
+      // imgValue: require("../images/avatars/Vector..png"),
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
       datasets: [
@@ -295,7 +295,7 @@ BlogOverview.defaultProps = {
       value: "504",
       percentage: "4.7%",
       increase: true,
-      imgValue: require("../images/avatars/ok.png"),
+      // imgValue: require("../images/avatars/ok.png"),
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
       datasets: [
@@ -314,7 +314,7 @@ BlogOverview.defaultProps = {
       value: "504",
       percentage: "4.7%",
       increase: true,
-      imgValue: require("../images/avatars/Vec.png"),
+      // imgValue: require("../images/avatars/Vec.png"),
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
       datasets: [

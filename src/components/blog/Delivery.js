@@ -90,7 +90,7 @@ class Delivery extends React.Component {
     return (
       <Card small className="h-100">
         <CardHeader className="border-bottom">
-          <h6 className="m-0  h4">{title}</h6>
+          <h6 className="m-0 h6">{title}</h6>
         </CardHeader>
         <CardBody className="pt-0">
           <Row className="border-bottom py-2 bg-light">

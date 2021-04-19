@@ -274,6 +274,10 @@ a {
   }
 }
 
+.stats-small--1 .stats-small__value {
+  font-size: 1.2rem !important;
+}
+
 @media screen and (max-width: 992px) {
   .dms-sign {
     font-size: 12px;
@@ -416,7 +420,7 @@ label.company {
 }
 
 .stats-small--1 .stats-small__label {
-  font-size: 15px !important;
+  font-size: 0.75 !important;
   margin: 1rem;
   font-weight: bold;
 }
@@ -424,8 +428,8 @@ label.company {
 .no-border {
   border: 0 !important;
 }
-
+/* 
 .select.form-control:not([size]):not([multiple]),
 .custom-select-sm {
   height: calc(3.09375rem + 1px) !important;
-}
+} */
