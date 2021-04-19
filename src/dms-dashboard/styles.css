@@ -421,7 +421,7 @@ label.company {
 
 .stats-small--1 .stats-small__label {
   font-size: 0.75 !important;
-  margin: 1rem;
+  margin: 1rem !important;
   font-weight: bold;
 }
 
