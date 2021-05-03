@@ -63,3 +63,7 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 ### Changelog
 
 Please check out the [CHANGELOG](CHANGELOG.md).
+
+<a href="https://trackgit.com">
+<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/ko6ojxj01hdcs0a4lkmk" alt="trackgit-views" />
+</a>
